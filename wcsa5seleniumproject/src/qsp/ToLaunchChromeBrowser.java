@@ -6,13 +6,13 @@ import org.openqa.selenium.WebDriver.Options;
 import org.openqa.selenium.WebDriver.Window;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class ToLaunchChromeBrowser {
 
 	public static void main(String[] args) throws InterruptedException {
 		
-		// Relative Path of Driver Executable File
-		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
-		
+	      WebDriverManager.chromedriver().setup();
 		// upcast into WebDriver (I)
 		  WebDriver driver=new ChromeDriver(); // Launch Chrome Browser
 		  
